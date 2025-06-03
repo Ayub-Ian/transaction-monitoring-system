@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: transaction
+  datasource:
+    url: jdbc:postgresql://localhost:5432/hfc_transactions
+    username: shortbyts
+    password: shortbyts
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+#  sql:
+#    init:
+#      mode: always
+#      data-locations: classpath:data.sql
+
+
+api-docs:
+  path: /api-docs
+swagger-ui:
+  path: /swagger-ui.html
+  operationsSorter: method
+
+#logging:
+#  level:
+#    root: INFO
+#    com.hfc: DEBUG
+#  pattern:
+#    console: "%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"
+#    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+#  file:
+#    name: logs/application.log
+
+
+jwt:
+  secret: 8cd15496e3e6d5c925befd2570f38e1b0a869949e894cb55c3f57e870b4b5ed2
+  expiration: 86400000 # 1 day in milliseconds
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
