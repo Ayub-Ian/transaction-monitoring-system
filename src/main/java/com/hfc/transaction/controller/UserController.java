@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/users")
 public class UserController {
     @Autowired
+
     private UserRepository userRepository;
 
     @GetMapping
